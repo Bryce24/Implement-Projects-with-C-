@@ -1,8 +1,3 @@
----
-show: step
-version: 1.0 
----
-
 # Implement the Tetris with C++
 
 ## 1. Introduction
