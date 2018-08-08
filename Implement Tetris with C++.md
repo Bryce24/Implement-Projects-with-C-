@@ -6,7 +6,7 @@ In this lab, we will analyze the train of thoughts before we design the Tetris, 
 
 #### Learning Objective
 
-+ Basics of C++
++ Basic C++
 + Ncurses library
 + Logistic design of the Tetris
 + Draw the windows
@@ -483,30 +483,4 @@ void Piece::judge(){
 	for(i=game_win_height-2;i>=2;i--){
 		int s=i;
 		if(exsqr(i)==0){
-			while(s>1 && exsqr(--s)==0);	//Search the row of the exsiting cube and move it down
-			for(j=1;j<game_win_width-1;j++){
-				box_map[i][j]=box_map[s][j]; // Move the up layer down
-				box_map[s][j]=0;	//Remove the up layer
-			}
-		}
-	}
-
-	/*The screen will be refreshed after removing and moving the marks. Print game_win again.*/
-	for(int i=1;i<game_win_height-1;i++)
-			for(int j=1;j<game_win_width-1;j++){
-				if(box_map[i][j]==1){
-					mvwaddch(game_win,i,j,'#');
-					wrefresh(game_win);
-				}
-				else{
-					mvwaddch(game_win,i,j,' ');
-					wrefresh(game_win);
-				}
-			}
-	}
-}		
-```
-
-## 5. Summray
-
-Now we have finished introducing the key functions. You definitely can operate the program as long as you figure out the major functions, implement them and refer to the source code to complement other functions. What's more, there are many other ways of implementing Tetris which may vary from person to person. It is possible for you to compose a more fluent and concise program. Have some fun!
+			while(s>1 && ex
